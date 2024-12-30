@@ -1,123 +1,144 @@
-
 body {
-  background-image: linear-gradient(left grey black);
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  border: 2px solid hsl(30, 10%, 92%);
-  border-radius: 15px;
-  animation: fade 2s ease-in-out 1ms;
-}
-#calculator {
-  font-family: arial, sans-serif;
-  background-color: rgb(24, 24, 24);
-  border-radius: 15px;
-  max-width: 500px;
-  overflow: hidden;
-  animation: fade 2s ease-in-out 1ms;
-}
-@keyframes fade {
-  from{
-     opacity: 0.1;
-     transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#display {
-  width: 100%;
-  padding: 20px;
-  font-size: 5rem;
-  text-align: left;
-  border: none;
-  background-color: rgb(43, 42, 42);
-  color: white;
-}
-#keys {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 25px;
-}
-button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  border: none;
-  background-color: hsl(0, 2%, 18%);
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-button:hover {
-  background-color: hsl(0, 2%, 28%);
-}
-button:active {
-  background-color: hsl(0, 2%, 38%);
-}
-.operator {
-  background-color: hsl(22, 88%, 49%);
-  animation: change 5s ease-in 1ms;
-}
-.operator:hover {
-  background-color: hsl(22, 88%, 59%);
-}
-.operator:active {
-  background-color: hsl(22, 88%, 69%);
-}
-@keyframes change {
-  from {
-    background-color: hsl(0, 2%, 18%);
-  }
-  to {
-    background-color: hsl(22, 88%, 49%);
-  }
-}
-
-
-
-
-
-@media (max-width: 500px) {
-  
-  body {
-    height: 80%;
-    width: 95%;
+    width: 100%;
+    background-image: linear-gradient( to bottom left, black 90%, grey 50%, hsl(22, 88%, 49%) 10%);
+    margin: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    margin: 20% 2.5%;
-    border: 5px double hsl(22, 90%, 49%);
-    animation: fade 2s ease-in-out 1ms
+    height: 100vh;
+    border-radius: 15px;
+    animation: fade 2s ease-in-out 1ms;
   }
   #calculator {
-    height: 70%;
-    width: 100%;
+    font-family: arial, sans-serif;
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    animation: fade 2s ease-in-out 1ms;
+    position: relative;
+  }
+  @keyframes fade {
+    from{
+       opacity: 0.1;
+       transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   #display {
     width: 100%;
-    /*height: 20%;*/
-    padding: 10px;
-    font-size: 3rem;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: rgb(43, 42, 42);
+    color: white;
   }
   #keys {
-    justify-content: center;
-    padding: 19px;
-    margin: 0 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
   }
   button {
-    width: 68px;
-    height: 68px;
-    margin: 0 -3px;
-    font-size: 1.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 2%, 18%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
   }
-
-
-
-
-}
+  button:hover {
+    background-color: hsl(0, 2%, 28%);
+  }
+  button:active {
+    background-color: hsl(0, 2%, 38%);
+  }
+  .operator {
+    background-color: hsl(22, 88%, 49%);
+    animation: change 5s ease-in 1ms;
+  }
+  .operator:hover {
+    background-color: hsl(22, 88%, 59%);
+  }
+  .operator:active {
+    background-color: hsl(22, 88%, 69%);
+  }
+  @keyframes change {
+    from {
+      background-color: hsl(0, 2%, 18%);
+    }
+    to {
+      background-color: hsl(22, 88%, 49%);
+    }
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 500px) {
+    
+    body {
+      height: 80%;
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      margin: 20% 2.5%;
+      border: 2px solid hsl(22, 90%, 49%);
+      animation: fade 2s ease-in-out 1ms
+    }
+    #calculator {
+      height: 70%;
+      width: 450px;
+    }
+    #display {
+      width: 100%;
+      /*height: 20%;*/
+      padding: 10px;
+      font-size: 3rem;
+    }
+    #keys {
+      justify-content: center;
+      padding: 19px;
+      margin: 0 5px;
+    }
+    button {
+      width: 68px;
+      height: 68px;
+      margin: 5px -3px;
+      font-size: 1.5rem;
+    }
+  
+  }  
+  @media (min-width: 501px) {
+    body {
+      height: 100%;
+    }
+    #calculator {
+      margin: 50px auto;
+      height: 70%;
+      width: 400px;
+    }
+    button {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (min-width: 1000px) {
+    #calculator {
+      height: 90%;
+      width: 500px;
+    }
+    button {
+      width: 80px;
+      height: 80px;
+    }
+  }
